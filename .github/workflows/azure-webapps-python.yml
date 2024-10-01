@@ -34,7 +34,7 @@ jobs:
       - name: 'Terraform Init'
         run: |
           pwd
-          ll
+          ls
           terraform init
     
       # Terraform plan to show what resources will be created
