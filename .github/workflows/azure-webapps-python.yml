@@ -32,8 +32,9 @@ jobs:
 
       # Terraform init to initialize the configuration
       - name: 'Terraform Init'
-        run: pwd
-        run: terraform init
+        run: |
+          pwd
+          terraform init
     
       # Terraform plan to show what resources will be created
       - name: 'Terraform Plan'
