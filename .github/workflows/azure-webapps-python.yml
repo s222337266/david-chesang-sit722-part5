@@ -3,7 +3,7 @@
 name: Build and deploy Python app to Azure Web App
 
 env:
-  AZURE_WEBAPP_NAME: your-app-name  # set this to the name of your Azure Web App
+  AZURE_WEBAPP_NAME: bookapp  # set this to the name of your Azure Web App
   PYTHON_VERSION: '3.8'              # set this to the Python version to use
   VERSION: 1
 
@@ -32,6 +32,7 @@ jobs:
 
       # Terraform init to initialize the configuration
       - name: 'Terraform Init'
+        run: pwd
         run: terraform init
     
       # Terraform plan to show what resources will be created
